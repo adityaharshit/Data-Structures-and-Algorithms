@@ -3,17 +3,17 @@ package Recursion;
 public class IsPalindrome {
     public static void main(String[] args){
         IsPalindrome i = new IsPalindrome();
-        String str = "madfam";
-        boolean isPal = i.isPalindrome(str, 0, str.length()-1);
+        String str = "maddam";
+        boolean isPal = i.isPalindrome(str);
         System.out.println(isPal);
     }
-    public boolean isPalindrome(String str, int start, int end){
-        if(start>=end){
+    public boolean isPalindrome(String str){
+        if(str.length()==0 || str.length()==1){
             return true;
         }
-        else if(str.charAt(start)!=str.charAt(end)){
+        if(str.charAt(0)!=str.charAt(str.length()-1)){
             return false;
         }
-        return isPalindrome(str, ++start, --end);
+        return isPalindrome(str.substring(1, str.length()-1));
     }
 }
