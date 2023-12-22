@@ -5,7 +5,7 @@ package Searching;
 
 public class SquareRoot {
     public static void main(String[] args) {
-        int a =10;
+        int a =2;
         System.out.println(findSquareRoot(a));
     }
     static int findSquareRoot(int a){
